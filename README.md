@@ -88,5 +88,5 @@ See the full license details in the [LICENSE](LICENSE) file.
 ### Toggle
 ![Toggle](./screenshots/toggle.png)
 
-### 🎮 Mini Game
+### End
 ![End](./screenshots/end.png)
