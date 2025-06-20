@@ -18,16 +18,6 @@ A full-stack CGPA Calculator web app that allows you to manage students, subject
 
 ---
 
-## 🖼️ Screenshots
-
-| Main UI | CGPA Results |
-|--------|--------------|
-| ![screenshot1](screenshots/ui.png) | ![screenshot2](screenshots/result.png) |
-
-> Upload screenshots inside a `screenshots/` folder
-
----
-
 ## ⚙️ Tech Stack
 
 - **Frontend:** HTML, CSS (Dark Theme), JavaScript  
