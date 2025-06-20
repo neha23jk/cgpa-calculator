@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CGPA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎓 CGPA Calculator Portal</h1>
+  </header>
+
+  <form id="add-subject-form">
+    <h2>Add Subject</h2>
+    <input type="text" id="subjectName" placeholder="Subject Name" required />
+    <input type="number" id="credits" placeholder="Credits" required />
+    <select id="type">
+      <option value="theory">Theory</option>
+      <option value="practical">Practical</option>
+    </select>
+    <button type="submit">Add Subject</button>
+  </form>
+
+  <form id="add-student-form">
+    <h2>Add Student + Grades</h2>
+    <input type="text" id="studentId" placeholder="Student ID" required />
+    <input type="text" id="studentName" placeholder="Student Name" required />
+    <textarea id="gradesJson" placeholder='[ {"subject_id": 1, "grade": "AA"}, ... ]' rows="4" cols="50"></textarea>
+    <button type="submit">Add Student</button>
+  </form>
+
+  <form id="calc-cgpa-form">
+    <h2>Calculate CGPA</h2>
+    <input type="text" id="calcStudentId" placeholder="Student ID" required />
+    <button type="submit">Calculate</button>
+    <div class="results" id="cgpaResult"></div>
+  </form>
+
+  <div class="section">
+    <h2>📋 Batch Operations</h2>
+    <button onclick="calculateAllCgpa()">Calculate CGPA for All</button>
+    <button onclick="showAllCgpa()">Show All CGPA</button>
+    <div id="cgpaTable"></div>
+  </div>
+
+  <div class="section">
+    <h2>🔄 Update Grade</h2>
+    <input type="text" id="updateStudentId" placeholder="Student ID" />
+    <input type="number" id="updateSubjectId" placeholder="Subject ID" />
+    <input type="text" id="updateGrade" placeholder="Grade (e.g., AA)" />
+    <button onclick="updateGrade()">Update Grade</button>
+  </div>
+
+   <footer>
+    <p>Made with 💻 by @__firebolt</p>
+  </footer>
+  <div id="toast-container"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

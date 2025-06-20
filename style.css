@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --primary-color: #00adb5;
+  --accent-color: #eeeeee;
+  --input-bg: #2c2c2c;
+  --text-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.6);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  background: linear-gradient(90deg, #00adb5, #3f72af);
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+footer {
+  background: linear-gradient(90deg, #3f72af, #00adb5);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  box-shadow: 0 -4px 10px var(--shadow-color);
+}
+
+.spinner {
+  border: 4px solid #eee;
+  border-top: 4px solid #00adb5;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  display: block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toast {
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  animation: fadeIn 0.5s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.toast.success {
+  background-color: #00adb5;
+}
+.toast.error {
+  background-color: #ff4c4c;
+}
+.toast.info {
+  background-color: #3f72af;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+h1, h2 {
+  color: var(--accent-color);
+  text-shadow: 0 0 3px var(--primary-color);
+}
+
+form, .results, .section {
+  background: var(--card-bg);
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 0 15px var(--shadow-color);
+}
+
+input, select, textarea, button {
+  font-family: 'Poppins', sans-serif;
+  padding: 12px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  width: calc(100% - 30px);
+  display: block;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #03c4cc;
+}
+
+.results, #cgpaTable {
+  margin-top: 15px;
+  background-color: #222;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #333;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+  color: var(--primary-color);
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+/* Smooth transition globally */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Hover card lift */
+form, .results, .section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+form:hover, .section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--primary-color);
+}
